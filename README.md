@@ -1,2 +1,1 @@
-Simple shell project by simo and mostafa :D
-
+Simple shell project by simo and mostafa!
