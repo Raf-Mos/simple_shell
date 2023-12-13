@@ -39,5 +39,7 @@ char *_strncat(char *dest, char *source, int n);
 char *_strncpy(char *dest, char *source, int n);
 int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strchr(char *s, char c);
+int _setenv(char **cmd);
+int _unsetenv(char **cmd);
 
 #endif

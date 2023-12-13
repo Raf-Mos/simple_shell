@@ -30,6 +30,10 @@ int main(int ac, char **av)
 			exit_sh(cmd, av, &status, counter);
 		else if (_strcmp(cmd[0], "env") == 0)
 			full_env(cmd, &status);
+		else if (_strcmp(cmd[0], "setenv") == 0)
+			_setenv(cmd);
+		else if (_strcmp(cmd[0], "unsetenv") == 0)
+			_unsetenv(cmd);
 		else
 			status = executer(cmd, av, counter);
 	}
