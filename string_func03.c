@@ -30,31 +30,31 @@ char *_strncpy(char *dest, char *source, int n)
 	return (str);
 }
 
-/**
- * _strncat - concatenates two strings
- * @dest: 1st string
- * @source: 2nd string
- * @n: the amount of bytes to be maximally used
- * Return: the concatenated string
-*/
 
-char *_strncat(char *dest, char *source, int n)
+/**
+ * *_strncat - function that concatenates two strings.
+ *              n the number oh characters that will be concatenated
+ *
+ * @dest: string one
+ * @src: string tow
+ * @n: input numer of characters
+ *
+ * Return: dest
+ */
+
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, j = 0;
-	char *str = dest;
+	int j, i = 0;
 
 	while (dest[i] != '\0')
 		i++;
-	while (source[j] != '\0' && j < n)
-	{
-		dest[i] = source[j];
-		i++;
-		j++;
-	}
-	if (j < n)
-		dest[i] = '\0';
-	return (s);
+
+	for (j = 0; j < n && src[j] != '\0'; j++, i++)
+		dest[i] = src[j];
+
+	return (dest);
 }
+
 
 /**
 * _strncmp - comp two string with n char
@@ -92,8 +92,8 @@ char *_strchr(char *s, char c)
 {
 	do {
 		if (*s == c)
-		return (s);
-	}
-	while (*s++ != '\0')
+			return (s);
+	} while (*s++ != '\0');
+
 	return (NULL);
 }
