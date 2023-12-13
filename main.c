@@ -27,7 +27,7 @@ int main(int ac, char **av)
 			continue;
 
 		if (_strcmp(cmd[0], "exit") == 0)
-			exit_sh(char **cmd, char **av, int *status, int counter);
+			exit_sh(cmd, av, &status, counter);
 		else if (_strcmp(cmd[0], "env") == 0)
 			full_env(cmd, &status);
 		else
