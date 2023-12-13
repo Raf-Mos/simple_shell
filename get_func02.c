@@ -14,10 +14,11 @@ int positive_num(char *s)
 	{
 		return (0);
 	}
-	while (s != NULL)
+	while (s[i])
 	{
 		if (s[i] < '0' || s[i] > '9')
 			return (0);
+		i++;
 	}
 	return (1);
 }
