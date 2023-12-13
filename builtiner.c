@@ -52,6 +52,7 @@ void exit_sh(char **cmd, char **av, int *status, int counter)
 			write(STDERR_FILENO, "\n", 1);
 			free(ind);
 			freearrays(cmd);
+			(*status) = 2;
 			return;
 		}
 	}
