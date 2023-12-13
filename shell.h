@@ -35,5 +35,9 @@ void full_env(char **cmd, int *status);
 void handling_builtiner(char **cmd, char **av, int status, int counter);
 int _atoi(char *s);
 int positive_num(char *s);
+char *_strncat(char *dest, char *source, int n);
+char *_strncpy(char *dest, char *source, int n);
+int _strncmp(const char *s1, const char *s2, size_t n);
+char *_strchr(char *s, char c);
 
 #endif
